@@ -1,64 +1,26 @@
-# Proyecto de Página Web de Proceedings de Eventos
+# Principios SOLID en el Diseño de Componentes de Página Web
 
-Este proyecto es una aplicación web desarrollada en Flask y MongoEngine para gestionar los proceedings de eventos.
+En este proyecto, se han aplicado los principios SOLID para diseñar una interfaz web modular y mantenible. A continuación se detalla cómo se implementan estos principios:
 
-## Requisitos Previos
+## **Single Responsibility Principle (SRP)**
 
-- Python 3.6 o superior
-- pip (gestor de paquetes de Python)
+Cada componente de la página tiene una única responsabilidad específica:
 
-## Descargar el repositorio
+- **Footer:** Muestra los datos de derechos de autor.
+- **Header:** Contiene el logotipo y los botones con la barra de búsqueda.
+- **Hero:** Presenta un video y una breve descripción.
+- **Main Content:** Alberga el contenido principal de la página.
 
-- Clona el repositorio.
+Estos componentes están organizados en el directorio `PROCEEDINGS_EVENTS/ProceedingsEvents/presentacion/vista/EdicionEvento/EdicionEvento2023/src/app/component`, garantizando que cada uno maneje una parte distinta de la página.
 
-```bash
-git clone https://github.com/GiomarMC/PROCEEDINGS_EVENTS.git
-```
-- Cambia a la carpeta del proyecto y continua con la instalacion del entorno virtual.
+## **Open/Closed Principle (OCP)**
 
-## Creación y Activación de un Entorno Virtual
+La separación en componentes asegura que el sistema esté abierto para la extensión pero cerrado para la modificación. Puedes añadir nuevas funcionalidades o contenido sin necesidad de alterar el código existente de otros componentes.
 
-### En Windows
+## **Interface Segregation Principle (ISP)**
 
-1. Abre una terminal (cmd, PowerShell, o Git Bash).
-2. Navega al directorio del proyecto.
-3. Crea un entorno virtual con el siguiente comando:
+Los componentes están diseñados de manera que cada uno tiene una interfaz específica para su función particular. Esto evita que los componentes dependan de interfaces innecesarias o de métodos que no utilizan.
 
-    ```bash
-    py -3 -m venv .venv
-    ```
+---
 
-4. Activa el entorno virtual:
-
-    ```bash
-    .venv\Scripts\activate
-    ```
-
-### En Linux/MacOS
-
-1. Abre una terminal.
-2. Navega al directorio del proyecto.
-3. Crea un entorno virtual con el siguiente comando:
-
-    ```bash
-    python3 -m venv .venv
-    ```
-
-4. Activa el entorno virtual:
-
-    ```bash
-    . .venv/bin/activate
-    ```
-
-## Instalación de Requerimientos
-
-Una vez que el entorno virtual esté activado, instala los paquetes necesarios usando el archivo `requirements.txt`.
-
-1. Asegúrate de estar en el directorio del proyecto y que el entorno virtual esté activado.
-2. Ejecuta el siguiente comando:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-Esto instalará Flask, MongoEngine y todas las demás dependencias necesarias para el proyecto.
+Estos principios ayudan a mantener el código limpio, flexible y fácil de mantener. Para más detalles sobre la implementación, revisa la estructura de los componentes en el directorio mencionado.

@@ -1,0 +1,15 @@
+/* Estilos para Enlaces del Pie de Página */
+footer a {
+  text-decoration: none;
+  color: #ffffff; /* Blanco */
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #dddddd; /* Un tono más claro de blanco */
+}
+
+/* Estilos para Texto del Pie de Página */
+footer p, footer h5 {
+  color: #ffffff; /* Blanco */
+}
